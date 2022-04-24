@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"/Users/local_song/Documents/Unreal Projects/Dodgeball/Source/Dodgeball/Dodgeball.Build.cs",
+		"/Users/local_song/Documents/Unreal Projects/Dodgeball/Source/Dodgeball.Target.cs",
+		"/Users/local_song/Documents/Unreal Projects/Dodgeball/Source/DodgeballEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
