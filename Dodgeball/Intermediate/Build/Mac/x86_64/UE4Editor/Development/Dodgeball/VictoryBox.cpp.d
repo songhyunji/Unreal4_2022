@@ -2679,6 +2679,8 @@
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/RootMotionSource.generated.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/Character.generated.h \
+  /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Source/Dodgeball/HealthInterface.h \
+  /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Dodgeball/HealthInterface.generated.h \
   /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Dodgeball/DodgeballCharacter.generated.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/CoreUObject/Public/UObject/PropertyAccessUtil.h \

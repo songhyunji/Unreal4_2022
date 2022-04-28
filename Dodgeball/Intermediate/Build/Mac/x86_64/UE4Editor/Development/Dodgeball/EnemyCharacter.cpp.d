@@ -2674,10 +2674,6 @@
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/RootMotionSource.generated.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/Character.generated.h \
   /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Dodgeball/EnemyCharacter.generated.h \
-  /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Public/DrawDebugHelpers.h \
-  /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
-  /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/KismetMathLibrary.generated.h \
-  /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/Kismet/GameplayStatics.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/CoreUObject/Public/UObject/PropertyAccessUtil.h \
@@ -2692,4 +2688,6 @@
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/GameFramework/ProjectileMovementComponent.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Source/Runtime/Engine/Classes/GameFramework/MovementComponent.h \
   /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/MovementComponent.generated.h \
-  /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/ProjectileMovementComponent.generated.h
+  /Users/Shared/Epic\ Games/UE_4.27/Engine/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Engine/ProjectileMovementComponent.generated.h \
+  /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Source/Dodgeball/LookAtActorComponent.h \
+  /Users/local_song/DodgeBall/Unreal4_2022/Dodgeball/Intermediate/Build/Mac/x86_64/UE4Editor/Inc/Dodgeball/LookAtActorComponent.generated.h

@@ -70,7 +70,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ADodgeballProjectile)
 
 
-#define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_12_PRIVATE_PROPERTY_OFFSET
+#define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); }
+
+
 #define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_9_PROLOG
 #define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

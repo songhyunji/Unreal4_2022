@@ -14,12 +14,9 @@ class DODGEBALL_API AEnemyCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AEnemyCharacter();
-    bool LookAtActor(AActor* TargetActor);  // rotate character to look at actor,
-                                            // return if enemy can see actor
-    bool CanSeeActor(const AActor* TargetActor) const;  // check can see actor
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=LookAt, meta=(AllowPrivateAccess="true"))
-    class USceneComponent* SightSource;
+    class ULookAtActorComponent* LookAtActorComponent;
     
     // class for making dodgeball object
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category=Dodgeball)

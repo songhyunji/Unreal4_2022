@@ -22,12 +22,16 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+    
+    UPROPERTY(EditAnywhere, Category=Damage)
+    float Damage = 34.f;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
     UFUNCTION()
     void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+    
     FORCEINLINE class UProjectileMovementComponent* GetProjectileMovementComponent() const
     {
         return ProjectileMovement;

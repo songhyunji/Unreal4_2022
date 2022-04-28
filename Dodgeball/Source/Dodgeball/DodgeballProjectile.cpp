@@ -5,6 +5,7 @@
 #include "Components/SphereComponent.h"
 #include "DodgeballCharacter.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "HealthComponent.h"
 
 // Sets default values
 ADodgeballProjectile::ADodgeballProjectile()
@@ -12,7 +13,7 @@ ADodgeballProjectile::ADodgeballProjectile()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
     
-    SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollision"));
+    SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere Collision"));
     SphereComponent->SetSphereRadius(35.f);
     SphereComponent->SetCollisionProfileName(FName("Dodgeball"));
     SphereComponent->SetSimulatePhysics(true);
@@ -48,8 +49,16 @@ void ADodgeballProjectile::Tick(float DeltaTime)
 
 void ADodgeballProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-    if(Cast<ADodgeballProjectile>(OtherActor) != nullptr)
+    ADodgeballCharacter* Player = Cast<ADodgeballCharacter>(OtherActor);
+    if(Player != nullptr)
     {
+        // "Player" is real player (not other actor)
+        UHealthComponent* HealthComponent = Player->FindComponentByClass<UHealthComponent>();
+        
+        if(HealthComponent != nullptr)
+        {
+            HealthComponent->LoseHealth(Damage);
+        }
         Destroy();
     }
 }
