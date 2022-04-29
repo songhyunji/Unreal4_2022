@@ -15,13 +15,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define Dodgeball_Source_Dodgeball_HealthInterface_h_13_SPARSE_DATA
 #define Dodgeball_Source_Dodgeball_HealthInterface_h_13_RPC_WRAPPERS \
+	virtual void OnTakeDamage_Implementation() {}; \
 	virtual void OnDeath_Implementation() {}; \
  \
+	DECLARE_FUNCTION(execOnTakeDamage); \
 	DECLARE_FUNCTION(execOnDeath);
 
 
 #define Dodgeball_Source_Dodgeball_HealthInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnTakeDamage); \
 	DECLARE_FUNCTION(execOnDeath);
 
 
@@ -84,6 +87,7 @@ public: \
 	typedef UHealthInterface UClassType; \
 	typedef IHealthInterface ThisClass; \
 	static void Execute_OnDeath(UObject* O); \
+	static void Execute_OnTakeDamage(UObject* O); \
 	virtual UObject* _getUObject() const { check(0 && "Missing required implementation."); return nullptr; }
 
 
@@ -94,6 +98,7 @@ public: \
 	typedef UHealthInterface UClassType; \
 	typedef IHealthInterface ThisClass; \
 	static void Execute_OnDeath(UObject* O); \
+	static void Execute_OnTakeDamage(UObject* O); \
 	virtual UObject* _getUObject() const { check(0 && "Missing required implementation."); return nullptr; }
 
 

@@ -25,4 +25,8 @@ public:
     UFUNCTION(BlueprintNativeEvent, Category=Health)
     void OnDeath(); // called when player's health == 0
     virtual void OnDeath_Implementation() = 0;  // "= 0" mean this function isn't implemented
+    
+    UFUNCTION(BlueprintNativeEvent, Category=Health)
+    void OnTakeDamage();
+    virtual void OnTakeDamage_Implementation() = 0;
 };
