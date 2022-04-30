@@ -6,6 +6,7 @@
 #include "DodgeballCharacter.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "HealthComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ADodgeballProjectile::ADodgeballProjectile()
@@ -49,6 +50,11 @@ void ADodgeballProjectile::Tick(float DeltaTime)
 
 void ADodgeballProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+    if(BounceSound != nullptr && NormalImpulse.Size() > 600.0f)
+    {
+        UGameplayStatics::PlaySoundAtLocation(this, BounceSound, GetActorLocation(), 1.0f, 1.0f, 0.0f, BounceSoundAttenuation);
+    }
+    
     ADodgeballCharacter* Player = Cast<ADodgeballCharacter>(OtherActor);
     if(Player != nullptr)
     {
@@ -59,6 +65,17 @@ void ADodgeballProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActo
         {
             HealthComponent->LoseHealth(Damage);
         }
+        
+        if(HitParticles != nullptr)
+        {
+            UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitParticles, GetActorTransform());
+        }
+        
+        if(DamageSound != nullptr)
+        {
+            UGameplayStatics::PlaySoundAtLocation(this, DamageSound, GetActorLocation(), 0.5f, 1.0f);
+        }
+            
         Destroy();
     }
 }

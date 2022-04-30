@@ -71,7 +71,11 @@ public: \
 
 
 #define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); }
+	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ADodgeballProjectile, Damage); } \
+	FORCEINLINE static uint32 __PPO__BounceSound() { return STRUCT_OFFSET(ADodgeballProjectile, BounceSound); } \
+	FORCEINLINE static uint32 __PPO__BounceSoundAttenuation() { return STRUCT_OFFSET(ADodgeballProjectile, BounceSoundAttenuation); } \
+	FORCEINLINE static uint32 __PPO__HitParticles() { return STRUCT_OFFSET(ADodgeballProjectile, HitParticles); } \
+	FORCEINLINE static uint32 __PPO__DamageSound() { return STRUCT_OFFSET(ADodgeballProjectile, DamageSound); }
 
 
 #define Dodgeball_Source_Dodgeball_DodgeballProjectile_h_9_PROLOG

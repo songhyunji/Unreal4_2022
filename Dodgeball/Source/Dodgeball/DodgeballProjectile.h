@@ -16,6 +16,7 @@ public:
 	ADodgeballProjectile();
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Dodgeball, meta=(AllowPrivateAccess="true"))
     class USphereComponent* SphereComponent;
+    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Dodgeball, meta=(AllowPrivateAccess="true"))
     class UProjectileMovementComponent* ProjectileMovement;
 
@@ -24,7 +25,19 @@ protected:
 	virtual void BeginPlay() override;
     
     UPROPERTY(EditAnywhere, Category=Damage)
-    float Damage = 34.f;
+    float Damage = 10.f;
+    
+    UPROPERTY(EditAnywhere, Category=Sound)
+    class USoundBase* BounceSound;
+    
+    UPROPERTY(EditAnywhere, Category=Sound)
+    class USoundAttenuation* BounceSoundAttenuation;
+    
+    UPROPERTY(EditAnywhere, Category=Particles)
+    class UParticleSystem* HitParticles;
+    
+    UPROPERTY(EditAnywhere, Category=Sound)
+    class USoundBase* DamageSound;
 
 public:	
 	// Called every frame
